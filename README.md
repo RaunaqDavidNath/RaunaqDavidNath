@@ -14,7 +14,7 @@
 
 ## About
 
-> I build AI systems that run **end to end** — not notebooks that stop at a plot.
+> I build AI systems that run **end to end**.
 > Computer vision on aerial imagery, neural networks that compress themselves during training,
 > and data infrastructure that documents itself using LLMs.
 
@@ -76,7 +76,7 @@
 <img src="https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white" />
 </p>
 
-A lightweight catalog for SQL warehouses that **writes its own documentation**. It parses SQL views with `sqlglot` to build a dependency graph down to **column level**, then has Gemini 2.0 Flash generate a plain-English description, business glossary term, and owner team for every asset — so the catalog stays documented instead of waiting on humans who never get around to it.
+A lightweight metadata catalog for SQL warehouses that **documents itself**. It parses views with sqlglot into a column level dependency graph, then uses Gemini 2.0 Flash to write a plain English description, business glossary term, and owner team for every asset making documentation a build step instead of a backlog item nobody clears.
 
 Semantic search runs over vector embeddings, and the catalog is reachable two ways: a **Streamlit UI** for browsing, and an **MCP server** so an AI agent can query the lineage graph in plain language.
 
@@ -108,7 +108,7 @@ Detects buses, cars, and trucks from drone footage, where the top-down perspecti
 
 </div>
 
-YOLOv5s (~7.0M params), COCO-pretrained then fine-tuned for **100 epochs** on **3,795** annotated aerial images. The augmentation policy was rebuilt for overhead views — ±15° rotation, 50% vertical flip, 0.6 scale, 0.1 mixup — rather than inheriting defaults tuned for street-level photography.
+YOLOv5s (~7.0M params), COCO-pretrained then fine tuned for **100 epochs** on **3,795** annotated aerial images. The augmentation policy was rebuilt for overhead views — rotation, vertical flip, scale, mixup — rather than inheriting defaults tuned for street level photography.
 
 Cars scored highest at **0.905** mAP@0.5. Trucks were hardest: from directly overhead, a truck and a bus are close to the same rectangle.
 
